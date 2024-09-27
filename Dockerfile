@@ -13,5 +13,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of your application code into the container
 COPY . .
 
-# Command to run your application (modify as necessary)
-CMD ["python", "main.py"]
+# Copy the shell script into the container
+COPY run_during_business_hours.sh /app/run_during_business_hours.sh
+
+# Give the shell script execution permissions
+RUN chmod +x /app/run_during_business_hours.sh
+
+# Use the shell script as the entrypoint to control when the app runs
+CMD ["/app/run_during_business_hours.sh"]
