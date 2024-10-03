@@ -29,11 +29,17 @@ Pairs trading is a market-neutral strategy that exploits temporary price discrep
 
 1. Clone this repository.
 2. Install dependencies using `pip install -r requirements.txt`
-3. Update the `config.ini` file with your API key for data download (if applicable)
+3. Create an Alpaca account and obtain your API key and secret key.
+4. Update the `main.py` file with your Alpaca API credentials:
+
+```
+API_KEY = 'YOUR_API_KEY'
+SECRET_KEY = 'YOUR_SECRET_KEY'
+```
 
 **Running Backtest:**
 
-* Edit the `config.ini` file for parameters like lookback window, spread threshold, etc.
+* Edit the `main.py` file for parameters like lookback window, spread threshold, etc.
 * Run the script: `python pairs_trading.py`
 
 **Docker Support:**
@@ -47,7 +53,7 @@ This repository includes a `Dockerfile` to run the script in a Docker container.
 
 ### Backtesting Results
 
-The backtesting results are located in the `output` folder. This includes performance metrics like Sharpe Ratio, drawdown, and cumulative returns.
+The backtesting results include performance metrics like Sharpe Ratio, drawdown, and cumulative returns.
 
 **Disclaimer:** Backtesting results are based on historical data and may not reflect future performance.
 
