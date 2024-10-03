@@ -19,8 +19,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Alpaca API credentials
-API_KEY = 'PKCWAF1UPW4BS6BRIFG8'
-SECRET_KEY = 'nQXCChDtIktf5VdbyPzFApLLRp1gMLmHfpEfogZw'
+API_KEY = 'YOUR_API_KEY'
+SECRET_KEY = 'YOUR_SECRET_KEY'
 BASE_URL = 'https://paper-api.alpaca.markets'  # Use 'https://api.alpaca.markets' for live trading
 
 # Initialize Alpaca API
